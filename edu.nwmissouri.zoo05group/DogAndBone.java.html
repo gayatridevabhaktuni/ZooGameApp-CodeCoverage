@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DogAndBone.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ZooGameApp</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo05group</a> &gt; <span class="el_source">DogAndBone.java</span></div><h1>DogAndBone.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package edu.nwmissouri.zoo05group;
+
+/**
+ *This is DogAndBone class which extends AbstractGame
+ * @author S545031
+ */
+public class DogAndBone extends AbstractGame {
+
+    /**
+     *
+     * @param game_name
+     * @param number_of_players
+     */
+    public DogAndBone(String game_name, int number_of_players) {
+<span class="fc" id="L19">        super(game_name, number_of_players);</span>
+<span class="fc" id="L20">    }</span>
+
+    /**
+     *
+     * @param game_name
+     *
+     * call this play() method to see which game you are playing.
+     */
+    @Override
+    public void game(String game_name) {
+<span class="fc" id="L30">          System.out.printf(&quot;I Like to play %s. \n&quot;, this.game_name);</span>
+<span class="fc" id="L31">    }</span>
+
+    /**
+     * call this player() method to see how many number of players are playing.
+     */
+    public void players() {
+<span class="fc" id="L37">        System.out.printf(&quot;Playing DogAndBone with %s\n&quot;, this.number_of_players);</span>
+<span class="fc" id="L38">    }</span>
+
+    /**
+     *
+     * call this play() method to see which game you are playing.
+     */
+    @Override
+    public void play() {
+<span class="fc" id="L46">        System.out.println(&quot;DogAndBone is a game which is played by two different groups with bone in the circle&quot;);</span>
+<span class="fc" id="L47">    }</span>
+
+    /**
+     *
+     * call this skill() method to see which game you are playing.
+     */
+    @Override
+    public void skill() {
+<span class="fc" id="L55">        System.out.println(&quot;DogAndBone needs full concentration on bone to get the bone from circle&quot;);</span>
+
+<span class="fc" id="L57">    }</span>
+
+    /**
+     *
+     * call this rules() method to see which game you are playing.
+     */
+    @Override
+    public void rules() {
+<span class="fc" id="L65">        System.out.println(&quot;Each one person will come from each group and will play for the bone, the person who takes the bone will get a point.  &quot;);</span>
+<span class="fc" id="L66">    }</span>
+
+    /**
+     *
+     * call this scoring() method to see which game you are playing.
+     */
+    @Override
+    public void scoring() {
+<span class="fc" id="L74">        System.out.println(&quot;For each win the team gets 1 point and finally at the end highest points group wins!!&quot;);</span>
+<span class="fc" id="L75">    }</span>
+
+    void game() {
+<span class="nc" id="L78">        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.</span>
+    }
+/**
+ * Enum for DogAndBone class
+ */
+<span class="nc" id="L83">    public enum Things {</span>
+<span class="nc" id="L84">        BONE,</span>
+<span class="nc" id="L85">        STONE,</span>
+<span class="nc" id="L86">        BALL,</span>
+<span class="nc" id="L87">        BOTTLE;</span>
+        
+    }
+
+    /**
+     * Main method
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+<span class="nc" id="L97">        DogAndBone dogandbone = new DogAndBone(&quot;DogAndBone&quot;, 2);</span>
+<span class="nc" id="L98">        dogandbone.game(&quot;DogAndBone&quot;);</span>
+<span class="nc" id="L99">        dogandbone.players();</span>
+<span class="nc" id="L100">        dogandbone.rules();</span>
+<span class="nc" id="L101">        dogandbone.play();</span>
+<span class="nc" id="L102">        dogandbone.skill();</span>
+<span class="nc" id="L103">        dogandbone.scoring();</span>
+<span class="nc" id="L104">    }</span>
+
+    /**
+     * An instance of an DogAndBone is now Runnable - call this run() method to
+     * see all the DogAndBone tricks.
+     */
+    @Override
+    public void run() {
+<span class="nc" id="L112">        this.game();</span>
+<span class="nc" id="L113">        this.players();</span>
+<span class="nc" id="L114">        this.rules();</span>
+<span class="nc" id="L115">        this.play();</span>
+<span class="nc" id="L116">        this.skill();</span>
+<span class="nc" id="L117">        this.scoring();</span>
+<span class="nc" id="L118">    }</span>
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

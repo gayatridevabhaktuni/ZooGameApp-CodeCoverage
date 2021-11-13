@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Badminton.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ZooGameApp</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo05group</a> &gt; <span class="el_source">Badminton.java</span></div><h1>Badminton.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package edu.nwmissouri.zoo05group;
+
+/**
+ * Badminton class (derived subclass of the superclass AbstractGame)
+ *
+ * @author S545243 Satheesh Eppalapelli
+ */
+public class Badminton extends AbstractGame implements Runnable {
+
+    /**
+     *
+     * @param game_name
+     * @param number_of_players
+     */
+    public Badminton(String game_name, int number_of_players) {
+<span class="fc" id="L20">        super(game_name, number_of_players);</span>
+<span class="fc" id="L21">    }</span>
+
+    /**
+     *
+     * @param game_name
+     *
+     * call this play() method to see which game you are playing.
+     */
+    @Override
+    public void game(String game_name) {
+<span class="fc" id="L31">        System.out.printf(&quot;I Like to play %s.\n&quot;, this.game_name);</span>
+<span class="fc" id="L32">    }</span>
+
+    /**
+     * call this player() method to see how many number of players are playing.
+     */
+    public void players() {
+<span class="fc" id="L38">        System.out.printf(&quot;Playing Badminton with %s players.\n&quot;, this.number_of_players);</span>
+<span class="fc" id="L39">    }</span>
+
+    /**
+     *
+     * call this play() method to see which game you are playing.
+     */
+    @Override
+    public void play() {
+<span class="fc" id="L47">        System.out.println(&quot;Badminton is a racquet sport played using racquets to hit a shuttlecock across a net.&quot;);</span>
+<span class="fc" id="L48">    }</span>
+
+    /**
+     *
+     * call this skill() method to see which game you are playing.
+     */
+    @Override
+    public void skill() {
+<span class="fc" id="L56">        System.out.println(&quot;Badminton offers a wide variety of basic strokes, and players require a high level of skill to perform all of them effectively. All strokes can be played either forehand or backhand.&quot;);</span>
+
+<span class="fc" id="L58">    }</span>
+
+    /**
+     *
+     * call this rules() method to see which game you are playing.
+     */
+    @Override
+    public void rules() {
+<span class="fc" id="L66">        System.out.println(&quot;The court is rectangular and divided into halves by a net. Courts are usually marked for both singles and doubles play, although badminton rules permit a court to be marked for singles only.&quot;);</span>
+
+<span class="fc" id="L68">    }</span>
+
+    /**
+     *
+     * call this scoring() method to see which game you are playing.
+     */
+    @Override
+    public void scoring() {
+<span class="fc" id="L76">        System.out.println(&quot;Each game is played to 21 points, with players scoring a point whenever they win a rally regardless of whether they served (this differs from the old system where players could only win a point on their serve and each game was played to 15 points). A match is the best of three games.&quot;);</span>
+<span class="fc" id="L77">    }</span>
+
+    void game() {
+<span class="nc" id="L80">        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.</span>
+    }
+
+    /**
+     *
+     * call this stocks() enum method to see which badminton stockes.
+     */
+<span class="nc" id="L87">    public enum stockes {</span>
+<span class="nc" id="L88">        SERVES,</span>
+<span class="nc" id="L89">        CLEARS,</span>
+<span class="nc" id="L90">        SMASHES,</span>
+<span class="nc" id="L91">        DRIVES,</span>
+<span class="nc" id="L92">        DROPS;</span>
+    }
+
+    /**
+     * Main method
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+<span class="nc" id="L101">        Badminton badminton = new Badminton(&quot;Badminton&quot;, 2);</span>
+<span class="nc" id="L102">        badminton.game(&quot;Badminton&quot;);</span>
+<span class="nc" id="L103">        badminton.players();</span>
+<span class="nc" id="L104">        badminton.rules();</span>
+<span class="nc" id="L105">        badminton.play();</span>
+<span class="nc" id="L106">        badminton.skill();</span>
+<span class="nc" id="L107">        badminton.scoring();</span>
+<span class="nc" id="L108">    }</span>
+
+    /**
+     * An instance of an Badminton is now Runnable - call this run() method to
+     * see all the Badminton tricks.
+     */
+    @Override
+    public void run() {
+<span class="nc" id="L116">        this.game();</span>
+<span class="nc" id="L117">        this.players();</span>
+<span class="nc" id="L118">        this.rules();</span>
+<span class="nc" id="L119">        this.play();</span>
+<span class="nc" id="L120">        this.skill();</span>
+<span class="nc" id="L121">        this.scoring();</span>
+<span class="nc" id="L122">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
